@@ -45,9 +45,7 @@ async def start(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                  InlineKeyboardButton(
-                        "Source code ⚡", url="https://github.com/Clinton-Abraham/UPLOADER-BOT"
-                    ),
+                  
                     InlineKeyboardButton("Project Channel 👨🏻‍💻", url="https://t.me/Space_X_bots"),
                 ],
                     
