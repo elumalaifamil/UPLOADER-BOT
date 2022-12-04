@@ -45,11 +45,20 @@ async def start(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                  
-                    
+                  InlineKeyboardButton(
+                        "botlink ⚡", url="https://t.me/digitaldvdgiftbot"
+                    ),
+                    InlineKeyboardButton("Admin 👨🏻‍💻", url="https://t.me/all_is_well_friends"),
+
+
                 ],
+                [InlineKeyboardButton("Developer 👨‍⚖️", url="https://t.me/all_is_well_friends")],
+
+                
                     
-                [],
+                
+                    
+               
             ]
         ),
         reply_to_message_id=update.message_id
