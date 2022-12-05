@@ -1,3 +1,21 @@
+
+Clinton-Abraham
+/
+UPLOADER-BOT
+Public
+Code
+Issues
+1
+Pull requests
+Actions
+Projects
+Security
+Insights
+UPLOADER-BOT/plugins/youtube_dl_echo.py
+@Clinton-Abraham
+Clinton-Abraham yt-dlp 🔥
+ 1 contributor
+250 lines (247 sloc)  10.3 KB
 # @SPACE_X_BOTS | @Clinton_Abraham </> 
 
 import logging, requests, urllib.parse, os, time, shutil, asyncio, json, math
@@ -192,15 +210,29 @@ async def echo(bot, update):
             cb_string_video = "{}|{}|{}".format(
                 "video", format_id, format_ext)
             inline_keyboard.append([
-                
                 InlineKeyboardButton(
-                    "📁 file - " + format_ext,
+                    "SVideo",
+                    callback_data=(cb_string_video).encode("UTF-8")
+                ),
+                InlineKeyboardButton(
+                    "DFile",
                     callback_data=(cb_string_file).encode("UTF-8")
                 )
             ])
             cb_string_file = "{}={}={}".format(
                 "file", format_id, format_ext)
-            
+            cb_string_video = "{}={}={}".format(
+                "video", format_id, format_ext)
+            inline_keyboard.append([
+                InlineKeyboardButton(
+                    "video",
+                    callback_data=(cb_string_video).encode("UTF-8")
+                ),
+                InlineKeyboardButton(
+                    "file",
+                    callback_data=(cb_string_file).encode("UTF-8")
+                )
+            ])
         reply_markup = InlineKeyboardMarkup(inline_keyboard)
         await imog.delete(True)
         await bot.send_message(
